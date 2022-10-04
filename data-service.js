@@ -17,7 +17,7 @@ function initialize(){
             }
             else{
                 employees=JSON.parse(data);
-                fs.readFile('./data/employees.json',(err,data)=>{
+                fs.readFile('./data/department.json',(err,data)=>{
                     if (err) {
                         reject("Failure to read file employees.json!");
                     }
