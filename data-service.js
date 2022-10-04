@@ -59,8 +59,11 @@ function getDepartments(){
 function getManagers()
 {
     return new Promise((resolve,reject) =>{
-       
-        let managers = employees.filter(employee => employee.isManager == true);
+       function checkManager(){
+        let employee = employees.isManager == true;
+        return employee;
+       }
+        let managers = employees.filter(checkManager());
         if(managers.length == 0)
         {
             reject("no result returned");
