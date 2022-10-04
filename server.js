@@ -37,7 +37,10 @@ app.get("/departments", (req,res) =>{
 
 app.get("/managers", (req,res) =>{
     dataService.getManagers().then((data) =>{
-        res.send(data);
+       const manager = data;
+       let resText = "<br>";
+    resText = JSON.stringify(manager) + "<br>";
+    res.send(manager);
     }).catch((err) =>{
         res.send("{message: }", err);
     });
