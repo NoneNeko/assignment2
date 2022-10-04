@@ -65,7 +65,7 @@ function getManagers()
             reject("no result returned");
         }
         else{
-            resolve()
+            resolve(managers);
         }
     });
 }
