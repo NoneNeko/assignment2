@@ -19,22 +19,26 @@ app.get("/about", (req,res) =>{
 
 app.get("/employees", (req,res) =>{
     dataService.getAllEmployees().then((data)=>{
+        res.json();
         const employee = data;
         let resText = "<br>";
         resText = JSON.stringify(employee) + "<br>";
         res.send(resText);
     }).catch((err) =>{
+        res.json();
         res.send("{message: }", err);
     });
 })
 
 app.get("/departments", (req,res) =>{
     dataService.getDepartments().then((data1) =>{
+        res.json();
         const department = data1;
         let resText1 = "<br>";
         resText1 = JSON.stringify(department) + "<br>";
         res.send(resText1);
     }).catch((err)=>{
+        res.json();
         res.send("{message: }",err);
     });
  
@@ -42,6 +46,7 @@ app.get("/departments", (req,res) =>{
 
 app.get("/managers", (req,res) =>{
     dataService.getManagers().then((data2) =>{
+        res.json();
         const manager = data2;
         let resText2 = "<br>";
         resText2 = JSON.stringify(manager) + "<br>";
