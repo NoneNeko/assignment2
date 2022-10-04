@@ -30,8 +30,8 @@ app.get("/employees", (req,res) =>{
 })
 
 app.get("/departments", (req,res) =>{
-    dataService.getDepartments().then((data) =>{
-        const department = data;
+    dataService.getDepartments().then((data1) =>{
+        const department = data1;
         let resText = "<br>";
         resText = JSON.stringify(department) + "<br>";
         res.send(resText);
@@ -42,8 +42,8 @@ app.get("/departments", (req,res) =>{
 }) 
 
 app.get("/managers", (req,res) =>{
-    dataService.getManagers().then((data) =>{
-        const manager = data;
+    dataService.getManagers().then((data2) =>{
+        const manager = data2;
         let resText = "<br>";
         resText = JSON.stringify(manager) + "<br>";
         res.send(resText);
