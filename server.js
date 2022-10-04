@@ -51,6 +51,9 @@ app.get("/managers", (req,res) =>{
     });
 })
 
+app.use((req, res) =>{
+    res.status(404).send("Error 404: Page not found.");
+})
 dataService.initialize().then(() =>{
     app.listen(HTTP_PORT, onHttpStart);
 }).catch((err) =>{
