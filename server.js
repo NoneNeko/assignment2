@@ -35,6 +35,14 @@ app.get("/departments", (req,res) =>{
  
 }) 
 
+app.get("/managers", (req,res) =>{
+    dataService.getManagers().then((data) =>{
+        res.send(data);
+    }).catch((err) =>{
+        res.send("{message: }", err);
+    });
+})
+
 dataService.initialize().then(() =>{
     app.listen(HTTP_PORT, onHttpStart);
 }).catch((err) =>{

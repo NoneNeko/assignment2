@@ -4,7 +4,7 @@ module.exports ={
     initialize,
     getAllEmployees,
     getDepartments,
-    getDepartments
+    getManagers
 }
 let employees = [];
 let departments = [];
