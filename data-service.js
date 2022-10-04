@@ -1,5 +1,11 @@
 var fs = require("fs");
 
+module.exports ={
+    initialize,
+    getAllEmployees,
+    getDepartments,
+    getDepartments
+}
 let employees = [];
 let departments = [];
 
