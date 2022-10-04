@@ -60,13 +60,13 @@ function getManagers()
 {
     return new Promise((resolve,reject) =>{
        
-        let employee = employees.filter(employee => employee.isManager == true);
+        let managers = employees.filter(employee => employee.isManager == true);
         if(managers.length == 0)
         {
             reject("no result returned");
         }
         else{
-            resolve(employee);
+            resolve(managers);
         }
     });
 }
