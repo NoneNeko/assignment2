@@ -1,3 +1,15 @@
+/*************************************************************************
+* WEB322– Assignment 2
+* I declare that this assignment is my own work in accordance with Seneca Academic
+Policy. No part * of this assignment has been copied manually or electronically from any
+other source
+* (including 3rd party web sites) or distributed to other students.
+*
+* Name: Dai Dung Lam, Student ID: 137 632 196 Date: October-4th-2022
+*
+* Your app’s URL (from Cyclic) :_______________________________________________
+*
+*************************************************************************/ 
 var express = require("express");
 var app = express();
 var dataService = require("./data-service");
