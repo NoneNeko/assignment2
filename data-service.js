@@ -59,7 +59,7 @@ function getDepartments(){
 function getManagers()
 {
     return new Promise((resolve,reject) =>{
-        let managers = employees.filter(employee => employee.isManager == true);
+        let managers = employees.filter(checkManager());
         if(managers.length == 0)
         {
             reject("no result returned");
@@ -71,7 +71,8 @@ function getManagers()
 }
 
 function checkManager(){
-    return employees.isManager == true;
+    var employee;
+    return employee.isManager == true;
 }
     
 
