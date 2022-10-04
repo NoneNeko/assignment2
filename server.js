@@ -16,3 +16,5 @@ app.get("/", (req,res) => {
 app.get("/about", (req,res) =>{
     res.sendFile(__dirname +"/views/about.html");
 }) 
+
+app.listen(HTTP_PORT, onHttpStart);
