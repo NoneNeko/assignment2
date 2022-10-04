@@ -1,6 +1,5 @@
 var express = require("express");
 var app = express();
-var path = require("path");
 var dataService = require("./data-service");
 app.use(express.static('public'));
 
