@@ -31,10 +31,9 @@ app.get("/employees", (req,res) =>{
 
 app.get("/departments", (req,res) =>{
     dataService.getDepartments().then((data) =>{
-        res.json();
-        const manager = data;
+        const department = data;
         let resText = "<br>";
-        resText = JSON.stringify(manager) + "<br>";
+        resText = JSON.stringify(department) + "<br>";
         res.send(resText);
     }).catch((err)=>{
         res.send("{message: }",err);
@@ -44,9 +43,9 @@ app.get("/departments", (req,res) =>{
 
 app.get("/managers", (req,res) =>{
     dataService.getManagers().then((data) =>{
-        const department = data;
+        const manager = data;
         let resText = "<br>";
-        resText = JSON.stringify(department) + "<br>";
+        resText = JSON.stringify(manager) + "<br>";
         res.send(resText);
     }).catch((err) =>{
         res.json();
